@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  include 'includes/dataBase_connection.php';
+?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>

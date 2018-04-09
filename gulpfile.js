@@ -33,14 +33,14 @@ gulp.task('stylus', () => {
 gulp.task('watch', ['browserSync', 'stylus'], () => {
 	gulp.watch('app/styles/stylus/**/*.styl', ['stylus'])
 	gulp.watch('app/scripts/**/*.js', browserSync.reload)
-	gulp.watch('app/*.html', browserSync.reload)
+	gulp.watch('app/**/*.php', browserSync.reload)
 })
 
 // Task to concat and minify css & js files and transfer them to dist directory
 gulp.task('useref', () => {
-	return gulp.src('app/*.html')
+	return gulp.src('app/*.php')
 		.pipe(useref())
-		.pipe(gulpIf('**/*.+(js|html|css)', minifier({
+		.pipe(gulpIf('**/*.+(js|php|css)', minifier({
 			minify: true,
 			minifyHTML: {
 				collapseWhitespace: true,
