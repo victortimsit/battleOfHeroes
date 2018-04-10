@@ -1,6 +1,7 @@
 <?php
   session_start();
   include 'includes/dataBase_connection.php';
+  include 'includes/errors.php';
   include 'includes/Rooter.php';
 
   $inputs = ['user_name', 'password'];
@@ -18,6 +19,11 @@
     header('Location: ./');
   }
 
+  if(!empty($_POST['user_name']) || !empty($_POST['password'])) {
+    echo '<pre>';
+    print_r($registerErrors);
+    echo '</pre>';
+  }
   // deconnection()
 ?>
 
