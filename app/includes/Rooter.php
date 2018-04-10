@@ -1,6 +1,7 @@
 <?php
 include 'signIn_form.php';
 include 'signOut.php';
+include 'signUp_form.php';
 
 class Rooter {
     public function __construct($namesOfInputArray, $pdo) {
@@ -15,8 +16,11 @@ class Rooter {
             foreach($this->inputs as $input) {
                 if(empty($_POST[$input])) {
                     // Fill errors array
-                    global $registerErrors;
-                    $registerErrors[$input] = '--empty';
+                    global $signInErrors;
+                    $signInErrors[$input] = '--empty';
+
+                    global $signUpErrors;
+                    $signUpErrors[$input] = '--empty';
                     // $this->displayErrors();
                 }
             }
@@ -24,11 +28,21 @@ class Rooter {
             if(!empty($_POST['user_name']) AND !empty($_POST['password'])) {
                 $this->signIn($this->pdo);
             }
+            // Call signUp if form isn't empty
+            if(!empty($_POST['create_user_name']) AND !empty($_POST['create_email']) AND !empty($_POST['create_password']) AND !empty($_POST['confirm_password'])) {
+                echo '<pre>';
+                print_r('cosibzfp');
+                echo '</pre>';
+                $this->signUp($this->pdo);
+            }
         }
     }
     function signIn($pdo) {
         $inputs = ['user_name', 'password'];
         $signIn = new Register($pdo);
+    }
+    function signUp($pdo) {
+        $signUp = new SignUp($pdo);
     }
     function displayErrors() {
         echo '<pre>';

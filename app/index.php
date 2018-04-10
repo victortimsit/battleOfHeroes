@@ -3,10 +3,15 @@
   include 'includes/dataBase_connection.php';
   include 'includes/errors.php';
   include 'includes/Rooter.php';
-
+  
   $inputs = ['user_name', 'password'];
 
+  // $signInErrors;
   $rooter = new Rooter($inputs, $pdo);
+
+  echo '<pre>';
+  print_r($signUpErrors);
+  echo '</pre>';
 
   function connection($account, $id) {
     $_SESSION['user'] = $account;
@@ -21,10 +26,9 @@
 
   if(!empty($_POST['user_name']) || !empty($_POST['password'])) {
     echo '<pre>';
-    print_r($registerErrors);
+    print_r($signInErrors);
     echo '</pre>';
   }
-  // deconnection()
 ?>
 
 <?php 
@@ -72,7 +76,7 @@
                 </label>
               </div>
           </form>
-          <a href="createAccount.php">Create a account</a>
+          <a href="signUp.php">Create a account</a>
       </div>
     </body>
     </html>

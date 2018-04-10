@@ -1,8 +1,8 @@
 <?php
 class Register {
     public function __construct($pdo) {
-        $this->userName = $_POST['user_name'];
-        $this->password = $_POST['password'];
+        $this->userName = htmlspecialchars(trim($_POST['user_name']));
+        $this->password = htmlspecialchars(trim($_POST['password']));
 
         $this->pdo = $pdo;
 
@@ -28,8 +28,8 @@ class Register {
         if(!empty($user)) {
             $this->passwordCheck($user, $password);
         } else {
-            global $registerErrors;
-            $registerErrors['connection'] = '--invalid';
+            global $signInErrors;
+            $signInErrors['connection'] = '--invalid';
         }
     }
 
@@ -39,8 +39,8 @@ class Register {
         if(password_verify($password, $userPassword)) {
             connection($user->user_name, $user->id);
         } else {
-            global $registerErrors;
-            $registerErrors['connection'] = "--invalid";
+            global $signInErrors;
+            $signInErrors['connection'] = "--invalid";
         }
     }
 }

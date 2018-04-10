@@ -1,2 +1,3 @@
 <?php
-$registerErrors = [];
+$signInErrors = [];
+$signUpErrors = [];
