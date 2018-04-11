@@ -3,7 +3,7 @@
   include 'includes/errors.php';
   include 'includes/Rooter.php';
 
-  $inputs = ['create_user_name', 'create_email', 'create_password', 'confirm_password'];
+  $inputs = ['create_user_name', 'create_email', 'create_password', 'confirm_password', 'avatar'];
 
   $rooter = new Rooter($inputs, $pdo);
 
@@ -33,6 +33,14 @@
             <input class="register__input" type="password" name="create_password" placeholder="Password">
             <label class="register__label" for="confirm_password">Confirm password</label>
             <input class="register__input" type="password" name="confirm_password" placeholder="Confirm password">
+            <?php $rand = rand(1, 9); ?>
+            <?= $rand ?>
+            <?php for($i = 0; $i < 10 ; $i++) {?>
+            <label>
+              <input type="radio" name="avatar" value="<?= $i ?>" <?= $rand == $i ? 'checked' : false ?>>
+              <img src="assets/avatars/<?= $i ?>.jpg" alt="avatar">
+            </label>
+            <?php } ?>
             <div class="register__button">
               <label>
               <input class="register__submit" type="submit">

@@ -5,7 +5,12 @@ class SignUp {
         $this->email = htmlspecialchars(trim($_POST['create_email']));
         $this->password = htmlspecialchars(trim($_POST['create_password']));
         $this->confirmPassword = htmlspecialchars(trim($_POST['confirm_password']));
+        $this->avatar = $_POST['avatar'];
         $this->pdo = $pdo;
+
+        echo '<pre>';
+        print_r($this->avatar);
+        echo '</pre>';
 
         $this->signUpCheck($this->userName, $this->password, $this->confirmPassword);
     }
@@ -42,27 +47,28 @@ class SignUp {
                 $signUpErrors['password'] = '--sameAsUserName';
             }
             else {
-                $this->createAccount($this->userName, $this->email, $this->password);
+                $this->createAccount($this->userName, $this->email, $this->password, $this->avatar);
             }
         } else {
             global $signUpErrors;
             $signUpErrors['user_name'] = '--alreadyExist';
         }
     }    
-    function createAccount($userName, $email, $password) {
+    function createAccount($userName, $email, $password, $avatar) {
         echo '<pre>';
         print_r('Account created !');
         echo '</pre>';
         // Values
-        $data = ['user_name' => $userName, 'email' => $email, 'password' => password_hash($password, PASSWORD_DEFAULT)];
+        $data = ['user_name' => $userName, 'email' => $email, 'password' => password_hash($password, PASSWORD_DEFAULT), 'avatar' => $avatar];
                 
         // Prepare request
-        $prepare = $this->pdo->prepare('INSERT INTO users (user_name, email, password) VALUES (:user_name, :email, :password)');
+        $prepare = $this->pdo->prepare('INSERT INTO users (user_name, email, password, avatar) VALUES (:user_name, :email, :password, :avatar)');
 
         // Bind values
         $prepare->bindValue(':user_name', $data['user_name']);
         $prepare->bindValue(':email', $data['email']);
         $prepare->bindValue(':password', $data['password']);
+        $prepare->bindValue(':avatar', $data['avatar']);
         
         // Execute request
         $exec = $prepare->execute();
