@@ -1,0 +1,11 @@
+.timeline {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  height: 820px;
+  margin-top: 220px;
+  transform: skew(-10deg);
+  padding-right: 300px;
+  padding-left: 100px;
+  background: #fff;
+}

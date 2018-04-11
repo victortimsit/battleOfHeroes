@@ -2,6 +2,7 @@
   font-family: "bebas";
   src: url("../../../assets/fonts/BEBAS.ttf");
 }
+
 html,
 body,
 div,
@@ -202,6 +203,7 @@ body {
 mark {
   background: none;
 }
+
 *,
 *::before,
 *::after,
@@ -210,6 +212,7 @@ mark {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 hr {
   height: 1px;
   margin: 0;
@@ -226,7 +229,11 @@ a {
   outline: none;
 }
 body {
-  background: #808080;
+
+   overflow-x: scroll;
+  background: #000;
+}
+
 }
 h1 {
   font-family: 'bebas';
@@ -405,4 +412,300 @@ h1 {
 }
 .signUp__radio--hidden {
   display: none;
+}
+ 
+a {
+  text-decoration: none;
+}
+.header__logo {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  width: 140px;
+  margin-top: 48px;
+  margin-left: 45px;
+  background: #ed1b2a;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: -1px;
+  vertical-align: middle;
+}
+.header__menu {
+  display: inline-block;
+  text-align: center;
+}
+.header__timeline {
+  display: inline-block;
+  width: 130px;
+  height: 40px;
+  margin-top: 48px;
+  margin-left: 96px;
+  color: #fff;
+  font-size: 16px;
+  vertical-align: middle;
+}
+.header__timeline--active {
+  border: 1px solid #fff;
+}
+.header__theories {
+  display: inline-block;
+  width: 130px;
+  height: 40px;
+  margin-top: 48px;
+  margin-left: -5px;
+  color: #fff;
+  font-size: 16px;
+  vertical-align: middle;
+}
+.header__theories--active {
+  border: 1px solid #fff;
+}
+.header__timeline a {
+  display: inline-block;
+  margin-top: 10px;
+}
+.header__timeline--active a {
+  display: inline-block;
+  margin-top: 10px;
+}
+.header__theories a {
+  display: inline-block;
+  margin-top: 10px;
+}
+.header__theories--active a {
+  display: inline-block;
+  margin-top: 10px;
+}
+.header__account {
+  display: inline-block;
+  float: right;
+}
+.header__disconnect {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  margin-top: -15px;
+  margin-right: 45px;
+}
+.header__profilePicture {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-top: 48px;
+  margin-right: 21px;
+  border-radius: 50%;
+  background: #ed1b2a;
+}
+.header__profileName {
+  display: inline-block;
+  width: 120px;
+  height: 15px;
+  margin-top: 48px;
+  margin-right: 21px;
+  text-align: center;
+  color: #fff;
+  vertical-align: top;
+}
+.header__profileName p {
+  margin-top: 13px;
+}
+.timeline__dots {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  border-radius: 50%;
+  margin-left: 125px;
+  background: #ed1b2a;
+}
+.timeline__container {
+  transform: skew(10deg);
+  display: flex;
+}
+.timeline__poster {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 275px;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,0.3);
+}
+.timeline__poster--top {
+  bottom: 40px;
+}
+.timeline__poster--bottom {
+  margin-top: 40px;
+}
+.timeline__image--bottom {
+  position: relative;
+  bottom: -50px;
+}
+.timeline__bottomPoster {
+  bottom: 0px;
+  position: absolute;
+}
+.timeline__year {
+  margin-top: 10px;
+  width: 150px;
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 24px;
+}
+.timeline__redLine {
+  position: absolute;
+  left: 50%;
+  width: 160px;
+  height: 7px;
+  margin-top: 4px;
+  transform: translateX(-50%);
+  background: #ed1b2a;
+}
+.timeline__firstRedLine {
+  left: 0%;
+  width: 75px;
+  transform: translateX(5%);
+  background: #ed1b2a;
+}
+.timeline__lastRedLine {
+  left: 0;
+  width: 75px;
+  transform: translateX(-85%);
+  background: #ed1b2a;
+}
+.timeline__preview {
+  display: none;
+}
+.timeline__preview--active {
+  position: absolute;
+  width: 900px;
+  height: 500px;
+  left: 50%;
+  background: #fff;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,0.3);
+}
+.timeline__image {
+  float: left;
+  margin-top: 3%;
+  margin-left: 1.5%;
+}
+.timeline__text {
+  display: inline-block;
+  align-items: center;
+}
+.timeline__title {
+  margin-top: 5%;
+  margin-left: 325px;
+  margin-right: 25%;
+  font-size: 21px;
+  color: #4a4a4a;
+  line-height: 30px;
+  font-weight: bold;
+  vertical-align: top;
+}
+.timeline__popularity {
+  margin-top: 1%;
+  margin-left: 325px;
+  font-size: 18px;
+  color: #ed1b2a;
+  line-height: 30px;
+  font-weight: bold;
+}
+.timeline__subTitle {
+  margin-top: 0.5%;
+  margin-left: 325px;
+  margin-right: 25%;
+  font-size: 18px;
+  color: #4a4a4a;
+  line-height: 30px;
+  font-weight: bold;
+  vertical-align: top;
+}
+.timeline__overview {
+  margin: 0.5% 2% 2% 325px;
+  font-size: 14px;
+  color: #4a4a4a;
+  line-height: 20px;
+}
+.timeline__seeTheories {
+  display: inline-block;
+  position: absolute;
+  left: 80%;
+  top: 80%;
+  width: 115px;
+  height: 50px;
+  transform: skew(-10deg);
+  background: #ed1b2a;
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+  line-height: 22px;
+  font-weight: bold;
+}
+.timeline__buttonText {
+  margin-top: 3%;
+  transform: skew(10deg);
+}
+.timeline__hover {
+  display: inline-block;
+  width: 100%;
+  height: 100px;
+  transform: scaleY(0);
+  background: #fff;
+  text-align: center;
+}
+.timeline__hover {
+  transform: translateY(0px);
+}
+.timeline__hover--bottom {
+  transform: translateY(-250px);
+}
+.timeline__hoverButton {
+  display: inline-flex;
+  width: 100px;
+  height: 50px;
+  padding: 15px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background: #ed1b2a;
+  color: #fff;
+}
+.timeline__hoverBackground {
+  background: #fff;
+}
+.timeline__poster--bottom:hover .timeline__hover--bottom {
+  transform: translateY(0px);
+}
+.timeline__poster--top:hover .timeline__hover--top {
+  transform: translateY(-230px);
+}
+.timeline {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  height: 800px;
+  margin-top: 160px;
+  transform: skew(-10deg);
+  padding-right: 300px;
+  padding-left: 100px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,0.3);
+  background: #fff;
+}
+.background {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  opacity: 0.32;
+  filter: blur(15px);
+}
+.header {
+  position: fixed;
+  width: 100%;
+  margin-top: -25px;
 }

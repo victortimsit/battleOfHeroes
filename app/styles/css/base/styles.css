@@ -1,5 +1,6 @@
 body {
-  background: #808080;
+  overflow-x: scroll;
+  background: #000;
 }
 h1 {
   font-family: 'bebas';
@@ -7,4 +8,7 @@ h1 {
 ::placeholder {
   font-weight: lighter;
   color: $placeholder;
+}
+a {
+  text-decoration: none;
 }

@@ -1,0 +1,75 @@
+.timeline__preview {
+  display: none;
+}
+.timeline__preview--active {
+  position: absolute;
+  width: 900px;
+  height: 500px;
+  left: 50%;
+  background: #fff;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,0.3);
+}
+.timeline__image {
+  float: left;
+  margin-top: 3%;
+  margin-left: 1.5%;
+}
+.timeline__text {
+  display: inline-block;
+  align-items: center;
+}
+.timeline__title {
+  margin-top: 5%;
+  margin-left: 325px;
+  margin-right: 25%;
+  font-size: 21px;
+  color: $greyfont;
+  line-height: 30px;
+  font-weight: bold;
+  vertical-align: top;
+}
+.timeline__popularity {
+  margin-top: 1%;
+  margin-left: 325px;
+  font-size: 18px;
+  color: $red;
+  line-height: 30px;
+  font-weight: bold;
+}
+.timeline__subTitle {
+  margin-top: 0.5%;
+  margin-left: 325px;
+  margin-right: 25%;
+  font-size: 18px;
+  color: $greyfont;
+  line-height: 30px;
+  font-weight: bold;
+  vertical-align: top;
+}
+.timeline__overview {
+  margin: 0.5% 2% 2% 325px;
+  font-size: 14px;
+  color: $greyfont;
+  line-height: 20px;
+}
+.timeline__seeTheories {
+  display: inline-block;
+  position: absolute;
+  left: 80%;
+  top: 80%;
+  width: 115px;
+  height: 50px;
+  transform: skew(-10deg);
+  background: $red;
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+  line-height: 22px;
+  font-weight: bold;
+}
+.timeline__buttonText {
+  margin-top: 3%;
+  transform: skew(10deg);
+}

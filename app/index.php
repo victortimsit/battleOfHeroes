@@ -33,25 +33,7 @@
 
 <?php 
   if (isset($_SESSION['user'])) { ?>
-    <!DOCTYPE html>
-    <html lang="fr">
-      <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title><?= $_SESSION['id'] ?></title>
-        <h1>Title</h1>
-        <a href="./?action=deconnection">Sign out</a>
-        <!--build:css styles/styles.min.css-->
-        <link rel="stylesheet" href="styles/css/main.css" />
-        <!--endbuild-->
-      </head>
-      <body>
-        <!--build:js scripts/main.min.js -->
-        <script src="scripts/script.js"></script>
-        <!--endbuild-->
-      </body>
-    </html>
+    include 'includes/timeline.php'
 <?php } else { ?>
   <!DOCTYPE html>
     <html lang="en">
@@ -105,3 +87,4 @@
     <?php
   }
 ?>
+
