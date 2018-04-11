@@ -8,10 +8,6 @@ class SignUp {
         $this->avatar = $_POST['avatar'];
         $this->pdo = $pdo;
 
-        echo '<pre>';
-        print_r($this->avatar);
-        echo '</pre>';
-
         $this->signUpCheck($this->userName, $this->password, $this->confirmPassword);
     }
 
@@ -33,31 +29,32 @@ class SignUp {
         // Check if email is valid
         $atIn = strpos($this->email, '@');
         $pointIn = strpos($this->email, '.');
-        if(!$atIn || !$pointIn) {
+        if(!$atIn AND !$pointIn) {
             global $signUpErrors;
-            $signUpErrors['email'] = '--invalid';
+            $signUpErrors['create_email'] = '--invalid';
         }
         if(empty($user)) {
             if($this->password != $confirmPassword ) {
                 global $signUpErrors;
-                $signUpErrors['password'] = '--notSame';
+                $signUpErrors['create_password'] = '--notSame';
             } 
             else if($this->password == $this->userName) {
                 global $signUpErrors;
-                $signUpErrors['password'] = '--sameAsUserName';
+                $signUpErrors['create_password'] = '--sameAsUserName';
             }
-            else {
+            else if(empty($signUpErrors['email'])){
                 $this->createAccount($this->userName, $this->email, $this->password, $this->avatar);
+                header('Location: ./signUpConfirm.php');
             }
         } else {
             global $signUpErrors;
-            $signUpErrors['user_name'] = '--alreadyExist';
+            $signUpErrors['create_user_name'] = '--alreadyExist';
         }
     }    
     function createAccount($userName, $email, $password, $avatar) {
-        echo '<pre>';
-        print_r('Account created !');
-        echo '</pre>';
+        // echo '<pre>';
+        // print_r('Account created !');
+        // echo '</pre>';
         // Values
         $data = ['user_name' => $userName, 'email' => $email, 'password' => password_hash($password, PASSWORD_DEFAULT), 'avatar' => $avatar];
                 

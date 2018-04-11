@@ -30,9 +30,6 @@ class Rooter {
             }
             // Call signUp if form isn't empty
             if(!empty($_POST['create_user_name']) AND !empty($_POST['create_email']) AND !empty($_POST['create_password']) AND !empty($_POST['confirm_password'])) {
-                echo '<pre>';
-                print_r('cosibzfp');
-                echo '</pre>';
                 $this->signUp($this->pdo);
             }
         }
