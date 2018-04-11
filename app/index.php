@@ -33,7 +33,9 @@
 
 <?php 
   if (isset($_SESSION['user'])) { ?>
+  <?php
     include 'includes/timeline.php'
+  ?>
 <?php } else { ?>
   <!DOCTYPE html>
     <html lang="en">
