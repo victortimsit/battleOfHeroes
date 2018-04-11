@@ -1,0 +1,3 @@
+<?php
+$signInErrors = [];
+$signUpErrors = [];

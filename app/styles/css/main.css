@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "bebas";
+  src: url("../../../assets/fonts/BEBAS.ttf");
+}
+
 html,
 body,
 div,
@@ -83,6 +88,7 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
+  text-decoration: none;
   font: inherit;
   vertical-align: baseline;
 }
@@ -197,6 +203,16 @@ body {
 mark {
   background: none;
 }
+
+*,
+*::before,
+*::after,
+*:before,
+*:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 hr {
   height: 1px;
   margin: 0;
@@ -213,9 +229,191 @@ a {
   outline: none;
 }
 body {
-  overflow-x: scroll;
+
+   overflow-x: scroll;
   background: #000;
 }
+
+}
+h1 {
+  font-family: 'bebas';
+}
+::placeholder {
+  font-weight: lighter;
+  color: #d0d0d0;
+}
+.signUp {
+  width: 640px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding-left: 95px;
+  padding-right: 95px;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  background: #fefefe;
+  border-radius: 2px;
+  font-family: 'Signika', sans-serif;
+  font-weight: lighter;
+}
+.signUp__title {
+  margin-bottom: 30px;
+  font-size: 43px;
+  color: #4a4a4a;
+  text-align: center;
+}
+.signUp__label {
+  margin-top: 10px;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 16px;
+  color: #9b9b9b;
+}
+.signUp__input {
+  width: 100%;
+  height: 30px !important;
+  padding-left: 5px;
+  border: 1px solid #c3c3c3;
+  border-radius: 2px;
+}
+.signUp__password {
+  margin-right: 4%;
+  float: left;
+  width: 48%;
+}
+.signUp__confirmPassword {
+  width: 48%;
+  display: inline-block;
+}
+.signUp__error {
+  padding-top: 2px;
+  height: 20px;
+  color: #ed1b2a;
+}
+.signUp__line {
+  width: 100%;
+  height: 1px;
+  margin-top: 20px;
+  background-color: #c3c3c3;
+}
+.signUp__avatar {
+  margin-top: 10px;
+  margin-left: 13px;
+  margin-right: 13px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+}
+.signUp__avatar:nth-child(6) {
+  margin-left: 60px;
+}
+.signUp__avatarImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  cursor: pointer;
+  transition: filter 300ms ease;
+}
+.signUp__radio:checked + .signUp__avatarImg {
+  filter: grayscale(0%);
+}
+.signUp__button {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 40px;
+  font-family: bebas;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: #ed1b2a;
+  cursor: pointer;
+  box-shadow: 0px 8px 20px rgba(237,27,42,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, fill 0.3s ease;
+}
+.signUp__button:hover {
+  margin-bottom: -2px;
+  background-color: #fff;
+  border: solid 1px #ed1b2a;
+  color: #ed1b2a;
+  box-shadow: 0px 15px 15px 4px rgba(0,0,0,0.1);
+  transform: translateY(-7px);
+}
+.signUp__button:active {
+  margin-bottom: 0px;
+  background-color: #ed1b2a;
+  color: #fff;
+  border: none;
+  transform: translateY(0px);
+  box-shadow: 0px 8px 20px rgba(57,151,214,0.1);
+}
+.signIn__signUp {
+  width: 640px;
+  margin: 0 auto;
+  font-family: 'Signika';
+  font-weight: lighter;
+}
+.signIn__line {
+  width: 44%;
+  margin-top: 40px;
+  float: left;
+  display: inline-block;
+  height: 1px;
+  background-color: #c3c3c3;
+}
+.signIn__or {
+  margin-top: 36px;
+  margin-left: 4%;
+  margin-right: 4%;
+  font-family: 'bebas';
+  float: left;
+  color: #c3c3c3;
+}
+.signIn__signUp {
+  margin-top: 0px;
+}
+.signIn__lines {
+  width: 100%;
+  height: 50px;
+  display: inline-block;
+}
+.signUp__connexion {
+  width: 150px;
+  float: right;
+  display: block;
+  margin-top: 40px;
+  font-family: bebas;
+  font-weight: bold;
+  text-align: center;
+  color: #4a4a4a;
+  padding: 20px;
+  border-radius: 30px;
+  border: solid 1px #4a4a4a;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, fill 0.3s ease;
+}
+.signUp__connexion:hover {
+  background-color: #fff;
+  border: solid 1px #ed1b2a;
+  color: #ed1b2a;
+  box-shadow: 0px 15px 15px 4px rgba(0,0,0,0.1);
+  transform: translateY(-7px);
+}
+.signUp__connexion:active {
+  margin-bottom: 0px;
+  background-color: #ed1b2a;
+  color: #fff;
+  border: none;
+  transform: translateY(0px);
+  box-shadow: 0px 8px 20px rgba(57,151,214,0.1);
+}
+.signUp__radio--hidden {
+  display: none;
+}
+ 
 a {
   text-decoration: none;
 }

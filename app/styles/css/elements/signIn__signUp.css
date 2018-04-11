@@ -1,0 +1,30 @@
+.signIn__signUp {
+  width: 640px;
+  margin: 0 auto;
+  font-family: 'Signika';
+  font-weight: lighter;
+}
+.signIn__line {
+  width: 44%;
+  margin-top: 40px;
+  float: left;
+  display: inline-block;
+  height: 1px;
+  background-color: $input;
+}
+.signIn__or {
+  margin-top: 36px;
+  margin-left: 4%;
+  margin-right: 4%;
+  font-family: 'bebas';
+  float: left;
+  color: $input;
+}
+.signIn__signUp {
+  margin-top: 0px;
+}
+.signIn__lines {
+  width: 100%;
+  height: 50px;
+  display: inline-block;
+}

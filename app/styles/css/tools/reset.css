@@ -87,6 +87,7 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
+  text-decoration: none;
   font: inherit;
   vertical-align: baseline;
 }
@@ -211,10 +212,15 @@ mark {
   background: none;
 }
 /* Font smoothing */
-/**,*::before,*::after,*:before,*:after {
-     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}*/
+*,
+*::before,
+*::after,
+*:before,
+*:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* hr */
 hr {
   height: 1px;
