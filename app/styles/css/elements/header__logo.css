@@ -1,0 +1,14 @@
+.header__logo {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  width: 140px;
+  margin-top: 48px;
+  margin-left: 45px;
+  background: $red;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: -1px;
+  vertical-align: middle;
+}

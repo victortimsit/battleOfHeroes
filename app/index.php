@@ -1,6 +1,9 @@
 <?php
   session_start();
   include 'includes/dataBase_connection.php';
+
+  include 'includes/timeline.php'
+  
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -10,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Page</title>
     <!--build:css styles/styles.min.css-->
-    <link rel="stylesheet" href="styles/css/base/styles.css" />
+    <link rel="stylesheet" href="styles/css/main.css" />
     <!--endbuild-->
   </head>
   <body>

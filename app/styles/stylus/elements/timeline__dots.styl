@@ -1,0 +1,48 @@
+.timeline__dots
+    display inline-block
+    width 15px
+    height 15px
+    position relative
+    border-radius 50%
+    margin-left 125px
+
+    background $red
+
+.timeline__container
+    transform skew(10deg)
+    display flex
+
+.timeline__poster
+    display inline-block
+    position absolute
+    left 50%
+    transform translateX(-50%)
+    height 275px
+    overflow hidden
+
+    border-radius 2px
+    
+    box-shadow 0 1px 10px 0 rgba(0,0,0,0.30)
+
+.timeline__poster--top
+    bottom 40px
+
+.timeline__poster--bottom
+    margin-top 40px
+
+.timeline__image--bottom
+    position relative
+    bottom -50px
+
+.timeline__bottomPoster
+    bottom 0px
+    position absolute
+
+.timeline__year
+    margin-top 10px
+    width 150px
+    
+    text-align center
+    color $greyfont
+    font-size 24px
+

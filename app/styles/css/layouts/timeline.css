@@ -1,0 +1,14 @@
+.timeline {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  height: 800px;
+  margin-top: 160px;
+  transform: skew(-10deg);
+  padding-right: 300px;
+  padding-left: 100px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,0.3);
+  background: #fff;
+}

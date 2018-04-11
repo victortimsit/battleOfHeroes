@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_exit_to_app</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M8.35125,14.53875 L9.9375,16.125 L15.5625,10.5 L9.9375,4.875 L8.35125,6.46125 L11.25375,9.375 L0.375,9.375 L0.375,11.625 L11.25375,11.625 L8.35125,14.53875 L8.35125,14.53875 Z M18.375,0.375 L2.625,0.375 C1.37625,0.375 0.375,1.3875 0.375,2.625 L0.375,7.125 L2.625,7.125 L2.625,2.625 L18.375,2.625 L18.375,18.375 L2.625,18.375 L2.625,13.875 L0.375,13.875 L0.375,18.375 C0.375,19.6125 1.37625,20.625 2.625,20.625 L18.375,20.625 C19.6125,20.625 20.625,19.6125 20.625,18.375 L20.625,2.625 C20.625,1.3875 19.6125,0.375 18.375,0.375 L18.375,0.375 Z" id="path-1"></path>
+    </defs>
+    <g id="theory" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1370.000000, -24.000000)">
+        <g id="user" transform="translate(373.000000, 15.000000)">
+            <g id="ic_exit_to_app" transform="translate(997.000000, 9.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
