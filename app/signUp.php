@@ -57,7 +57,7 @@
               <?php 
               if(!empty($signUpErrors['create_password'])) { 
                 echo $signUpErrors['create_password'] == '--empty' ? 'Password is required' : false; 
-                echo $signUpErrors['create_password'] == '--sameAsUnerName' ? 'Password could not be same as user name' : false; 
+                echo $signUpErrors['create_password'] == '--sameAsUserName' ? 'Password could not be same as user name' : false; 
                 echo $signUpErrors['create_password'] == '--notSame' ? 'Password not confirmed correctly' : false; 
                 } 
               if(!empty($signUpErrors['confirm_password']) AND empty($signUpErrors['create_password'])) {

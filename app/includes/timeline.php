@@ -17,29 +17,33 @@
 <body>
     <img class="background" src="assets/images/background.png" alt="background">
     <div class="header">
-        <div class="header__logo">
-            <a href="#">MARVEL THEORIES</a>
-        </div>
-        <div class="header__menu">
-            <div class="header__timeline header__timeline--active">
-                <a href="#">TIMELINE</a>
-            </div>
-            <div class="header__theories">
-                <a href="#">THEORIES</a>
-            </div>
-        </div>
-        <div class="header__account">
-            <div class="header__profilePicture">
-                
-            </div>
-            <div class="header__profileName">
-                <p>VICTOR TIMSIT</p>
-            </div>
-            <a href="./?action=deconnection">
-                <div class="header__disconnect">
-                    <img src="assets/images/ic_exit_to_app.svg" alt="disconnect">
+        <div class="header__container">
+            <div class="header__start">
+                <div class="header__logo">
+                    <a href="#">MARVEL THEORIES</a>
                 </div>
-            </a>
+                <div class="header__menu">
+                    <div class="header__timeline header__timeline--active">
+                        <a href="#">TIMELINE</a>
+                    </div>
+                    <div class="header__theories">
+                        <a href="#">THEORIES</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__end">
+                <div class="header__account">
+                    <span class="header__profilePicture">
+                        <!-- <img src="assets/avatars/.jpg" alt=""> -->
+                    </span>
+                    <span class="header__profileName"><?= $_SESSION['user'] ?></span>
+                    <a href="./?action=deconnection">
+                        <svg class="header__icon">
+                            <use class="header__iconUse"xlink:href="assets/images/icons/signOut.svg#signOut"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="phases">
