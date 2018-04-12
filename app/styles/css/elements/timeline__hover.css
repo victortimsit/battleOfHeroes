@@ -1,6 +1,8 @@
 .timeline__hover {
   display: inline-block;
   width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
   transform: scaleY(0);
   background: #fff;
   text-align: center;
@@ -14,7 +16,6 @@
 }
 .timeline__hoverButton--red {
   width: 130px;
-  margin-right: 10px;
   float: right;
   display: block;
   background-color: $red;
@@ -43,7 +44,6 @@
 }
 .timeline__hoverButton--white {
   width: 130px;
-  margin-right: 10px;
   float: right;
   display: block;
   margin-top: 10px;
