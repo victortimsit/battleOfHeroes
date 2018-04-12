@@ -867,6 +867,7 @@ a {
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 100px;
+  min-width: 900px;
   font-size: 56px;
   font-weight: bold;
 }

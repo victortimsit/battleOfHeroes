@@ -43,18 +43,19 @@
                 <div class="theoriesFlow__credibility">
                     CREDIBILITY
                     <div class="theoriesFlow__credibilityBar">
-                        <div class="theoriesFlow__credibilityBarFill" dataset-credibility="<?= ($article->credible / ( $article->notCredible + $article->credible)) * 100 ?>"></div>
+                        <div class="theoriesFlow__credibilityBarFill" data-credibility="<?= ($article->credible / ( $article->notCredible + $article->credible)) * 100 ?>"></div>
                     </div>
                 </div>
                 <div class="theoriesFlow__popularity">
                     POPULARITY
                     <div class="theoriesFlow__popularityBar">
-                        <div class="theoriesFlow__popularityBarFill" dataset-popularity="<?= ($article->likes / ( $article->dislikes + $article->likes)) * 100 ?>"></div>
+                        <div class="theoriesFlow__popularityBarFill" data-popularity="<?= ($article->likes / ( $article->dislikes + $article->likes)) * 100 ?>"></div>
                     </div>
                 </div>
             </div>
         </div>
         <?php endforeach; ?>
     </div>
+    <script src="../scripts/script.js" ></script>
 </body>
 </html>
