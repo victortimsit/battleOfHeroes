@@ -17,12 +17,16 @@
     position absolute
     left 50%
     transform translateX(-50%)
-    height 275px
+    width 150px
+    height 260px
     overflow hidden
 
     border-radius 2px
     
     box-shadow 0 1px 10px 0 rgba(0,0,0,0.30)
+
+    transition transform 150ms ease, box-shadow 150ms ease
+    will-change transform, box-shadow
 
 .timeline__poster--top
     bottom 40px
@@ -39,10 +43,17 @@
     position absolute
 
 .timeline__year
+    display inline-table
     margin-top 10px
+    margin-bottom 10px
     width 150px
+
+    font-family "bebas"
     
     text-align center
     color $greyfont
-    font-size 24px
+    font-size 18px
+
+    transition opacity 150ms ease;
+    pointer-events none
 
