@@ -3,8 +3,8 @@
   width: 15px;
   height: 15px;
   position: relative;
-  border-radius: 50%;
   margin-left: 125px;
+  border-radius: 50%;
   background: $red;
 }
 .timeline__container {
