@@ -1,8 +1,6 @@
 <?php
-
     $url = 'https://api.themoviedb.org/3/list/62792?api_key=829b41a4cec76e1a71b780aa42cc2498&language=en-US';
     $movieList = json_decode(file_get_contents($url));
-
 ?>
 
 <!DOCTYPE html>
@@ -11,41 +9,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles/css/main.css" />
+    <link rel="stylesheet" href="../styles/css/main.css" />
+    <link rel="stylesheet" href="../styles/css/states/header--position.css" />
     <title>Timeline</title>
 </head>
 <body>
-    <img class="background" src="assets/images/background.png" alt="background">
-    <div class="header">
-        <div class="header__container">
-            <div class="header__start">
-                <div class="header__logo">
-                    <a href="#">MARVEL THEORIES</a>
-                </div>
-                <div class="header__menu">
-                    <div class="header__timeline header__timeline--active">
-                        <a href="#">TIMELINE</a>
-                    </div>
-                    <div class="header__theories">
-                        <a href="#">THEORIES</a>
-                    </div>
-                </div>
-            </div>
-            <div class="header__end">
-                <div class="header__account">
-                    <span class="header__profilePicture">
-                        <!-- <img src="assets/avatars/.jpg" alt=""> -->
-                    </span>
-                    <span class="header__profileName"><?= $_SESSION['user'] ?></span>
-                    <a href="./?action=deconnection">
-                        <svg class="header__icon">
-                            <use class="header__iconUse"xlink:href="assets/images/icons/signOut.svg#signOut"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <img class="background" src="../assets/images/background.png" alt="background">
+    <?php include 'header.php' ?>
     <div class="phases">
         <div class="phases__first"></div>
         <div class="phases__second"></div>
@@ -94,8 +64,9 @@
         <?php $i++ ?>
         <?php endforeach; ?>
         </div>
+        <a href="articleFlow.php" class="seeAllTheories timeline__hoverButton--red">See all theories</a>
     </div>
-    <script src="scripts/SynopsisDisplay.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="../scripts/SynopsisDisplay.js"></script>
+    <script src="../scripts/script.js"></script>
 </body>
 </html>

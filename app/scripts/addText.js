@@ -4,6 +4,7 @@ class AddText {
         this.addTextarea = document.querySelector('.' + addTextareaButton)
         this.addTitle = document.querySelector('.' + addTitleButton)
         /* this.deletes = document.querySelectorAll('.' + crossDeleteButton) */
+
         this.addTextarea.addEventListener('click', () => {
             this.createTextarea(this.parentClass)
         })
@@ -60,3 +61,4 @@ class AddText {
 }
 
 const test = new AddText('theoryCreation__addText', 'theoryCreation__addButtonParagraph', 'theoryCreation__addButtonTitle', 'theoryCreation__deleteCross')
+

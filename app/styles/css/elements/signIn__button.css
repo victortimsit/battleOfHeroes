@@ -8,7 +8,6 @@
   text-align: center;
   color: $greyfont;
   padding: 20px;
-  border-radius: 30px;
   border: solid 1px $greyfont;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, fill 0.3s ease;
@@ -27,4 +26,26 @@
   border: none;
   transform: translateY(0px);
   box-shadow: 0px 8px 20px rgba(57,151,214,0.1);
+}
+.signIn {
+  padding-top: 10px;
+  color: #fff;
+  width: 640px;
+  margin: 0 auto;
+}
+.signIn__message {
+  font-family: 'Signika';
+  float: right;
+}
+.signIn__message p {
+  color: $white;
+  float: left;
+  margin-right: 10px;
+}
+.signIn__message a {
+  padding-top: 3px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid $white;
 }

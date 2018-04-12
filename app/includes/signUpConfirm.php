@@ -9,7 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Register</title>
         <link href="https://fonts.googleapis.com/css?family=Signika:300,400,600,700" rel="stylesheet">
-        <link rel="stylesheet" href="styles/css/main.css" />
+        <link rel="stylesheet" href="../styles/css/main.css" />
     </head>
     <body>
         <div class="signUp">

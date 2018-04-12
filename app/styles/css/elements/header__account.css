@@ -1,6 +1,7 @@
 .header__account {
   display: flex;
   align-items: center;
+  margin-top: -6px;
 }
 .header__disconnect {
   display: inline-block;
@@ -10,9 +11,10 @@
 }
 .header__profilePicture {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   margin-right: 21px;
+  overflow: hidden;
   border-radius: 50%;
   background: $red;
 }
@@ -21,4 +23,8 @@
   margin-right: 21px;
   color: #fff;
   vertical-align: top;
+}
+.header__profilePictureImg {
+  width: 100%;
+  height: 100%;
 }

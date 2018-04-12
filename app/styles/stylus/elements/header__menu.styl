@@ -7,7 +7,7 @@
     justify-content flex-end
 
 .header__menu
-    width 260px
+    width 280px
     margin-left 96px
     margin-right 56px
     display inline-block
@@ -27,11 +27,16 @@
     color #fff
     font-size 16px
     vertical-align middle
+    &:hover
+        transform scale(1.02)
+    &:active
+        transform scale(0.98)
 
 .header__timeline--active
     border 1px solid #fff
 
 .header__theories
+    margin-left 20px
     display flex
     float left
     align-items center
@@ -39,9 +44,35 @@
     width 130px
     height 40px
 
+    background-color $red
+
     color #fff
     font-size 16px
     vertical-align middle
+    &:hover
+        transform scale(1.02)
+    &:active
+        transform scale(0.98)
+
+.header__addTheories
+    margin-right 60px
+    display flex
+    float left
+    align-items center
+    justify-content center
+    width 130px
+    height 40px
+
+    background-color $red
+
+    color #fff
+    font-size 16px
+    vertical-align middle
+    &:hover
+        transform scale(1.02)
+    &:active
+        transform scale(0.98)
+
 
 .header__theories--active
     border 1px solid #fff
