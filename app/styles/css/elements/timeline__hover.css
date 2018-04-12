@@ -1,33 +1,90 @@
 .timeline__hover {
   display: inline-block;
   width: 100%;
-  height: 100px;
   transform: scaleY(0);
   background: #fff;
   text-align: center;
-}
-.timeline__hover {
-  transform: translateY(0px);
+  transition: transform 150ms ease;
 }
 .timeline__hover--bottom {
-  transform: translateY(-250px);
+  transform: translateY(-154px);
 }
-.timeline__hoverButton {
-  display: inline-flex;
-  width: 100px;
-  height: 50px;
-  padding: 15px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  background: $red;
+.timeline__hover--top {
+  transform: translateY(-4px);
+}
+.timeline__hoverButton--red {
+  width: 130px;
+  margin-right: 10px;
+  float: right;
+  display: block;
+  background-color: $red;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: bebas;
+  font-weight: bold;
+  text-align: center;
+  color: $white;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, fill 0.3s ease;
+}
+.timeline__hoverButton--red:hover {
+  box-shadow: 0px 15px 15px 4px rgba(0,0,0,0.1);
+  transform: translateY(-7px);
+}
+.timeline__hoverButton--red:active {
+  margin-bottom: 0px;
+  background-color: $white;
+  border: solid 1px $red;
+  color: $red;
+  border: none;
+  transform: translateY(0px);
+  box-shadow: 0px 8px 20px rgba(57,151,214,0.1);
+}
+.timeline__hoverButton--white {
+  width: 130px;
+  margin-right: 10px;
+  float: right;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: bebas;
+  font-weight: bold;
+  text-align: center;
+  color: $greyfont;
+  padding: 20px;
+  border: solid 1px $greyfont;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, fill 0.3s ease;
+}
+.timeline__hoverButton--white:hover {
+  background-color: #fff;
+  border: solid 1px $red;
+  color: $red;
+  box-shadow: 0px 15px 15px 4px rgba(0,0,0,0.1);
+  transform: translateY(-7px);
+}
+.timeline__hoverButton--white:active {
+  margin-bottom: 0px;
+  background-color: $red;
   color: #fff;
-}
-.timeline__hoverBackground {
-  background: #fff;
+  border: none;
+  transform: translateY(0px);
+  box-shadow: 0px 8px 20px rgba(57,151,214,0.1);
 }
 .timeline__poster--bottom:hover .timeline__hover--bottom {
   transform: translateY(0px);
 }
+.timeline__poster--bottom:hover .timeline__year {
+  opacity: 0;
+}
+.timeline__poster--top:hover .timeline__year {
+  opacity: 0;
+}
 .timeline__poster--top:hover .timeline__hover--top {
-  transform: translateY(-230px);
+  transform: translateY(-160px);
+}
+.timeline__poster:hover {
+  transform: translateX(-50%) scale(1.1);
+  box-shadow: 0px 8px 20px rgba(57,151,214,0.1);
 }

@@ -61,21 +61,21 @@
                 <div class="timeline__poster timeline__poster<?= $i%2 ? "--bottom" : "--top" ?> " >
                 <?php if($i%2 == 0) { ?>
                     <img src="https://image.tmdb.org/t/p/w150_and_h225_bestv2<?= $_item->poster_path ?>" alt="<?= $_item->original_title ?>">
-                    <div class="timeline__year"><?= $_item->release_date ?></div>
                     <div class="timeline__hover timeline__hover<?= $i%2 ? "--bottom" : "--top" ?>">
-                    <div class="timeline__hoverBackground">
-                        <a class="timeline__hoverButton" href="#">See Theories</a>
-                        <a class="timeline__hoverButton" href="#">See Movie</a>
+                    <div class="timeline__hoverBackground--top">
+                        <span class="timeline__year"><?= date("Y",strtotime($_item->release_date)) ?></span>
+                        <a class="timeline__hoverButton--white" href="#">Synopsis</a>
+                        <a class="timeline__hoverButton--red" href="#">See Theories</a>
                     </div>
                     </div>
                 <?php 
                 }else { ?>
-                    <div class="timeline__year"><?= $_item->release_date ?></div>
                     <img class="timeline__bottomPoster"src="https://image.tmdb.org/t/p/w150_and_h225_bestv2<?= $_item->poster_path ?>" alt="<?= $_item->original_title ?>">
                     <div class="timeline__hover timeline__hover<?= $i%2 ? "--bottom" : "--top" ?>">
-                        <div class="timeline__hoverBackground">
-                            <a class="timeline__hoverButton" href="#">See Theories</a>
-                            <a class="timeline__hoverButton" href="#">See Movie</a>
+                        <div class="timeline__hoverBackground--bottom">
+                            <a class="timeline__hoverButton--red" href="#">See Theories</a>
+                            <a class="timeline__hoverButton--white" href="#">Synopsis</a>
+                            <span class="timeline__year"><?= date("Y",strtotime($_item->release_date)) ?></span>
                         </div>
                     </div>
                 <?php } ?>
