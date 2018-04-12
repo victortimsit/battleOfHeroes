@@ -58,36 +58,36 @@
         <?php foreach($movieList->items as $_item): ?>
             <div class="timeline__dots">
                 <div class="<?=  $i == 0 ? 'timeline__firstRedLine' : false ?> <?=  $i == sizeof($movieList->items)-1 ? 'timeline__lastRedLine' : false ?> timeline__redLine"></div>
-                <div class="timeline__poster timeline__poster<?= $i%2 ? "--bottom" : "--top" ?> " >
-                <?php if($i%2 == 0) { ?>
+                <div class="timeline__poster timeline__poster<?= $i % 2 ? "--bottom" : "--top" ?> " >
+                <?php if($i % 2 == 0) { ?>
                     <img src="https://image.tmdb.org/t/p/w150_and_h225_bestv2<?= $_item->poster_path ?>" alt="<?= $_item->original_title ?>">
-                    <div class="timeline__hover timeline__hover<?= $i%2 ? "--bottom" : "--top" ?>">
+                    <div class="timeline__hover timeline__hover<?= $i % 2 ? "--bottom" : "--top" ?>">
                     <div class="timeline__hoverBackground--top">
                         <span class="timeline__year"><?= date("Y",strtotime($_item->release_date)) ?></span>
-                        <a class="timeline__hoverButton--white" href="#">Synopsis</a>
-                        <a class="timeline__hoverButton--red" href="#">See Theories</a>
+                        <div class="timeline__hoverButton--white">Synopsis</div>
+                        <div class="timeline__hoverButton--red">See Theories</div>
                     </div>
                     </div>
                 <?php 
                 }else { ?>
                     <img class="timeline__bottomPoster"src="https://image.tmdb.org/t/p/w150_and_h225_bestv2<?= $_item->poster_path ?>" alt="<?= $_item->original_title ?>">
-                    <div class="timeline__hover timeline__hover<?= $i%2 ? "--bottom" : "--top" ?>">
+                    <div class="timeline__hover timeline__hover<?= $i % 2 ? "--bottom" : "--top" ?>">
                         <div class="timeline__hoverBackground--bottom">
-                            <a class="timeline__hoverButton--red" href="#">See Theories</a>
-                            <a class="timeline__hoverButton--white" href="#">Synopsis</a>
+                            <div class="timeline__hoverButton--red">See Theories</div>
+                            <div class="timeline__hoverButton--white">Synopsis</div>
                             <span class="timeline__year"><?= date("Y",strtotime($_item->release_date)) ?></span>
                         </div>
                     </div>
                 <?php } ?>
                 </div>
-                <div class="timeline__preview">
+                <div class="timeline__preview timeline__preview--unDisplay <?= $i % 2 ? '--bottom' : '--top' ?> <?=  $i == 0 ? 'timeline__firstPreview' : false ?> <?=  $i == 1 ? 'timeline__secondPreview' : false ?> <?=  $i == 2 ? 'timeline__thirdPreview' : false ?> <?=  $i == sizeof($movieList->items) - 1 ? 'timeline__lastPreview' : false ?>">
                     <img class="timeline__image" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2<?= $_item->poster_path ?>" alt="<?= $_item->original_title ?>">
-                    <h1 class="timeline__title"><?= $_item->original_title ?> (<?=$_item->release_date ?>)</h1>
-                    <div class="timeline__popularity"><?= $_item->popularity ?></div>
-                    <h2 class="timeline__subTitle">Synopsis</h2>
-                    <div class="timeline__overview"><?= $_item->overview ?></div>
-                    <div class="timeline__seeTheories">
-                        <p class="timeline__buttonText">Discover Theories</p>
+                    <div class="timeline__content">
+                        <h1 class="timeline__title"><?= $_item->original_title ?> (<?=$_item->release_date ?>)</h1>
+                        <div class="timeline__popularity"><?= $_item->popularity ?></div>
+                        <h2 class="timeline__subTitle">Synopsis</h2>
+                        <div class="timeline__overview"><?= $_item->overview ?></div>
+                        <div class="timeline__hoverButton--absolute timeline__hoverButton--red">Discover Theories</div>
                     </div>
                 </div>
             </div>
@@ -95,5 +95,7 @@
         <?php endforeach; ?>
         </div>
     </div>
+    <script src="scripts/SynopsisDisplay.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
