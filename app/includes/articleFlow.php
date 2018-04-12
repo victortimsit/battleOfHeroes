@@ -1,9 +1,13 @@
 <?php 
-    include "database_connection.php";
-
+    include_once('session.php');
+    include 'dataBase_connection.php';
     //Get the data from the database and fetch them in an Array  
     $query = $pdo->query('SELECT * FROM articles');
     $articles = $query->fetchAll();
+
+    $query = $pdo->query('SELECT * FROM users');
+    $users = $query->fetchAll();
+    
 
     $url = 'https://api.themoviedb.org/3/list/62792?api_key=829b41a4cec76e1a71b780aa42cc2498&language=en-US';
     $movieList = json_decode(file_get_contents($url));
@@ -21,16 +25,23 @@
 </head>
 <body>
     <img class="background" src="../assets/images/background.png" alt="background">
+    <div class="header--default">
+        <?php include 'header.php'?>
+    </div>
     <div class="theoriesFlow">
-        <h1 class="theoriesFlow__pageTitle">All THEORIES</h1>
         <?php foreach($articles as $article): ?>
         <?php $poster = 0; ?>
         <div class="theoriesFlow__container">
             <div class="theoriesFlow__user">
-                <div class="theoriesFlow__userAvatar">
-                    <img src="#" alt="Avatar">
+                <div class="header__profilePicture">
+                    <?php 
+                        $authorID = $article->authorID;
+                        $query = $pdo->query('SELECT * FROM users WHERE id = '.$authorID.'');
+                        $user = $query->fetch();
+                    ?>                    
+                    <img class="header__profilePictureImg" src="../assets/avatars/<?= $user->avatar ?>.jpg" alt="Avatar">
                 </div>
-                <div class="theoriesFlow__userName">GUIGUI</div>
+                <div class="theoriesFlow__userName"><?= $user->user_name ?></div>
             </div>
             <?php for($i=0; $i < sizeof($movieList->items); $i++)
             {
@@ -41,13 +52,13 @@
             <div class="theoriesFlow__title"><?=$article->title ?></div>
             <div class="theoriesFlow__notes">
                 <div class="theoriesFlow__credibility">
-                    CREDIBILITY
+                    Credibility
                     <div class="theoriesFlow__credibilityBar">
                         <div class="theoriesFlow__credibilityBarFill" data-credibility="<?= ($article->credible / ( $article->notCredible + $article->credible)) * 100 ?>"></div>
                     </div>
                 </div>
                 <div class="theoriesFlow__popularity">
-                    POPULARITY
+                    Popularity
                     <div class="theoriesFlow__popularityBar">
                         <div class="theoriesFlow__popularityBarFill" data-popularity="<?= ($article->likes / ( $article->dislikes + $article->likes)) * 100 ?>"></div>
                     </div>
@@ -56,6 +67,6 @@
         </div>
         <?php endforeach; ?>
     </div>
-    <script src="../scripts/script.js" ></script>
+    <script src="../scripts/MarkRatio.js" ></script>
 </body>
 </html>

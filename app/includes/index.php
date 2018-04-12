@@ -1,8 +1,8 @@
 <?php
-  session_start();
-  include 'includes/dataBase_connection.php';
-  include 'includes/errors.php';
-  include 'includes/Rooter.php';
+  include_once('session.php');
+  include 'dataBase_connection.php';
+  include 'errors.php';
+  include 'Rooter.php';
   
   $inputs = ['user_name', 'password'];
 
@@ -34,7 +34,7 @@
 <?php 
   if (isset($_SESSION['user'])) { ?>
   <?php
-    include 'includes/timeline.php'
+    include 'timeline.php'
   ?>
 <?php } else { ?>
   <!DOCTYPE html>
@@ -44,7 +44,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Register</title>
-      <link rel="stylesheet" href="styles/css/main.css" />
+      <link rel="stylesheet" href="../styles/css/main.css" />
     </head>
     <body>
       <div class="signUp">

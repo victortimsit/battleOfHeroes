@@ -1,7 +1,7 @@
 <?php
-  include 'includes/dataBase_connection.php';
-  include 'includes/errors.php';
-  include 'includes/Rooter.php';
+  include 'dataBase_connection.php';
+  include 'errors.php';
+  include 'Rooter.php';
 
   $inputs = ['create_user_name', 'create_email', 'create_password', 'confirm_password', 'avatar'];
 
@@ -21,7 +21,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register</title>
     <link href="https://fonts.googleapis.com/css?family=Signika:300,400,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="styles/css/main.css" />
+    <link rel="stylesheet" href="../styles/css/main.css" />
   </head>
   <body>
     <div class="signUp">
@@ -72,7 +72,7 @@
               <?php for($i = 1; $i < 10 ; $i++) { ?>
                 <label class="signUp__avatar">
                   <input class="signUp__radio signUp__radio--hidden" type="radio" name="avatar" value="<?= $i ?>" <?= $rand == $i ? 'checked' : false ?>>
-                  <img class="signUp__avatarImg" src="assets/avatars/<?= $i ?>.jpg" alt="avatar">
+                  <img class="signUp__avatarImg" src="../assets/avatars/<?= $i ?>.jpg" alt="avatar">
                 </label>
               <?php } ?>
             </div>
@@ -81,6 +81,12 @@
               <div class="signUp__button">Create an account</div>
             </label>
         </form>
+    </div>
+    <div class="signIn">
+        <div class="signIn__message">
+            <p>Already an account ?</p>
+            <a href="index.php">Sign in</a>
+        </div>
     </div>
   </body>
 </html>

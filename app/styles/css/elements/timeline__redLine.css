@@ -19,3 +19,6 @@
   transform: translateX(-85%);
   background: $red;
 }
+.seeAllTheories {
+  margin-left: 100px;
+}

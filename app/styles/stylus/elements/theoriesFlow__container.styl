@@ -2,17 +2,25 @@
     align-items center
     width 75%
     min-width 900px
-    height 330px
     margin 20px auto;
     overflow hidden
-    padding 20px
+    padding-left 20px
+    padding-right 20px
+    padding-top 10px
+    padding-bottom 20px
 
     border-radius: 4px;
     
-    box-shadow: 0 1px 15px 0 rgba(0,0,0,0.30);
+    box-shadow 0 1px 15px 0 rgba(0,0,0,0.30)
     background #fff
 
     color #000
+    transition transform 150ms ease
+    cursor pointer
+    &:hover
+        transform scale(1.02)
+    &:active
+        transform scale(0.99)
 
 //User Avatar and Nickname
 .theoriesFlow__user
@@ -35,63 +43,65 @@
 .theoriesFlow__userName
     display inline-block
     margin-left 2%
+    font-family 'Signika'
+    color $greyfont
 
-    font-size 22px
+    font-size 18px
 
 //Movie poster
 .theoriesFlow__poster
+    height 180px
     float left
-    margin-top 10px
     margin-right 20px
 
 //Every note of the theory (Popularity and Credibility bar)
 .theoriesFlow__notes
-    display flex
-    margin-top 40px
+    margin-top 37px
+
+.theoriesFlow__credibilityBar
+    margin-top 5px
+    float left
+    width 200px
+    height 20px
+    background #F68E96 
+
+.theoriesFlow__popularityBar
+    margin-top 5px
+    width 200px
+    height 20px
+    background #8DDFB3
+    
 
 .theoriesFlow__popularity
     display inline-block
-    width 200px
-    height 30px
-    margin-left 2%
-    margin-right 7%
-    margin-bottom 10px
+
+    font-family 'Signika'
 
     color #41b628
     font-size 22px
     text-align left
 
-.theoriesFlow__popularityBar
-    width 100%
-    height 100%
-    margin-top 5px
+// .theoriesFlow__popularityBar
 
-    background #41b628
 
 .theoriesFlow__popularityBarFill
     width 50%
     height 100%
 
-    background #50e72f
+    background $green
 
 .theoriesFlow__credibility
+    margin-right 10px
     display inline-block
     width 200px
-    height 30px
-    margin-bottom 10px
-    margin-left 0.5%
-    margin-right 7%
+
+    font-family 'Signika'
 
     color #d11b28
     font-size 22px
     text-align left
 
-.theoriesFlow__credibilityBar
-    width 100%
-    height 100%
-    margin-top 5px
-
-    background #d11b28
+// .theoriesFlow__credibilityBar
 
 .theoriesFlow__credibilityBarFill
     width 50%
