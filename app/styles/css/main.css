@@ -289,6 +289,12 @@ a {
   font-family: 'Signika', sans-serif;
   font-weight: lighter;
 }
+.theoriesFlow {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
 .header__logo {
   display: flex;
   align-items: center;
@@ -769,6 +775,106 @@ a {
 .timeline__poster:hover {
   transform: translateX(-50%) scale(1.1);
   box-shadow: 0px 8px 20px rgba(57,151,214,0.1);
+}
+.theoriesFlow__container {
+  align-items: center;
+  width: 75%;
+  min-width: 900px;
+  height: 330px;
+  margin: 20px auto;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 1px 15px 0 rgba(0,0,0,0.3);
+  background: #fff;
+  color: #000;
+}
+.theoriesFlow__user {
+  display: flex;
+  width: 40%;
+  margin-bottom: 10px;
+  align-items: center;
+  text-align: left;
+}
+.theoriesFlow__userAvatar {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ed1b2a;
+}
+.theoriesFlow__userName {
+  display: inline-block;
+  margin-left: 2%;
+  font-size: 22px;
+}
+.theoriesFlow__poster {
+  float: left;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+.theoriesFlow__notes {
+  display: flex;
+  margin-top: 40px;
+}
+.theoriesFlow__popularity {
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  margin-left: 2%;
+  margin-right: 7%;
+  margin-bottom: 10px;
+  color: #41b628;
+  font-size: 22px;
+  text-align: left;
+}
+.theoriesFlow__popularityBar {
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
+  background: #41b628;
+}
+.theoriesFlow__popularityBarFill {
+  width: 50%;
+  height: 100%;
+  background: #50e72f;
+}
+.theoriesFlow__credibility {
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  margin-bottom: 10px;
+  margin-left: 0.5%;
+  margin-right: 7%;
+  color: #d11b28;
+  font-size: 22px;
+  text-align: left;
+}
+.theoriesFlow__credibilityBar {
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
+  background: #d11b28;
+}
+.theoriesFlow__credibilityBarFill {
+  width: 50%;
+  height: 100%;
+  background: #ed1b2a;
+}
+.theoriesFlow__pageTitle {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  font-size: 56px;
+  font-weight: bold;
+}
+.theoriesFlow__title {
+  margin-top: 20px;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: left;
 }
 .signUp__radio--hidden {
   display: none;
