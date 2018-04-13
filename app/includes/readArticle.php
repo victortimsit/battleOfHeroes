@@ -50,16 +50,40 @@
             <?php foreach($articleContents as $_articleContent): ?>
                 <?php if($_articleContent->type == 'title') { ?>
                     <div class="article__textTitle">
-                        <?= $_articleContent->content ?>
-                        <div class="article__comments">
-                        <img src="../assets/images/icons/commenticon.png" alt="Comments" class="articles__commentsIcon">
+                        <div class="article__textTitleContent">
+                            <?= $_articleContent->content ?>
+                        </div>
+                        <div class="article__commentsIconContainer article__commentsIconContainer--top">
+                            <img src="../assets/images/icons/commenticon.png" alt="Comments" class="articles__commentsIcon">
+                            <div class="article__userComments">
+                                <div class="article__userCommentsAuthor">
+                                    <img src="#" alt="" class="article__userCommentsAuthor--avatar">
+                                    <div class="article__userCommentsAuthor--name">Michel</div>
+                                </div>
+                                <div class="article__userCommentsContent">
+                                    <p>Amazing theory man omg <3<3</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 <?php }else { ?>
                     <div class="article__textCore">
-                        <?= $_articleContent->content ?>
-                        <div class="article__comments">
+                        <div class="article__textTitleContent">
+                            <?= $_articleContent->content ?>
+                        </div>
+                        <div class="article__commentsIconContainer">
                             <img src="../assets/images/icons/commenticon.png" alt="Comments" class="articles__commentsIcon">
+                            <div class="article__userComments">
+                                <div class="article__userCommentsAuthor">
+                                    <div class="article__userCommentsAuthor--avatar">
+                                        <img src="#" alt="" class="article__userCommentsAuthor--avatarImg">
+                                    </div>
+                                    <div class="article__userCommentsAuthor--name">Michel</div>
+                                </div>
+                                <div class="article__userCommentsContent">
+                                    <p>AMAZING !!! I love it sounds really great !</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 <?php } ?>

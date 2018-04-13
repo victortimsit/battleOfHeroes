@@ -1,3 +1,6 @@
+.article__header {
+  margin-bottom: 150px;
+}
 .article__headerImg {
   width: 300px;
   float: left;
