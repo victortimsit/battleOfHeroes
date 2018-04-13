@@ -35,10 +35,10 @@
             </div>
             <div class="theoriCreation__formContainer"></div>
                 <div class="theoryCreation__addText">
-                    <label class="theoryCreation__addTitle theoryCreation__addTitleLabel" for="Title">Title</label>
+                    <label class="theoryCreation__addTitle theoryCreation__addTitleLabel" for="Title">Theory title</label>
                     <input name="title" class="theoryCreation__input" type="text" placeholder="Title">
                     <label class="theoryCreation__addParagraph theoryCreation__addParagraphLabel" for="paragraph">Type your text</label>
-                    <textarea name="paragraph" class="theoryCreation__inputText " placeholder="Type your theory" id="" cols="30" rows="10"></textarea>
+                    <textarea name="content0" class="theoryCreation__inputText " placeholder="Type your theory" id="" cols="30" rows="10"></textarea>
                     <input type="hidden" name="date" value="<?= time() ?>">
                 </div>
             <label>
