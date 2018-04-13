@@ -1,5 +1,5 @@
 .article__header {
-  margin-bottom: 150px;
+  margin-bottom: 200px;
 }
 .article__headerImg {
   width: 300px;
@@ -29,7 +29,6 @@
   background: $red;
 }
 .article__authorName {
-  margin-left: 25px;
   font-family: 'Signika';
   font-weight: lighter;
   font-size: 22px;
