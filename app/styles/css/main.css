@@ -1245,6 +1245,12 @@ a {
 .theoryCreation__addButtonText {
   display: inline-block;
 }
+.theoryCreation__send {
+  float: none;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 324px;
+}
 .signUp__radio--hidden {
   display: none;
 }

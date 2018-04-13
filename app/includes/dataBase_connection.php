@@ -1,11 +1,16 @@
 <?php
 
 // Connexion variables
-define('DB_HOST', 'localhost');
-define('DB_PORT', '8889');
-define('DB_NAME', 'battleOfHeroes');
-define('DB_USER', 'root');
-define('DB_PASS', 'root');
+// define('DB_HOST', 'localhost');
+// define('DB_PORT', '8889');
+// define('DB_NAME', 'battleOfHeroes');
+// define('DB_USER', 'root');
+// define('DB_PASS', 'root');
+define('DB_HOST', '51.254.118.218');
+define('DB_PORT', '3306');
+define('DB_NAME', 'marvel');
+define('DB_USER', 'marvel');
+define('DB_PASS', 'clio3');
 
 try {
     // Try to connect to database
