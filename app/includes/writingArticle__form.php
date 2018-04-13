@@ -6,7 +6,6 @@ if(!empty($_POST)) {
     global $writingArticleErrors;
     !empty($_POST['movie']) ? $movie = $_POST['movie'] : $writingArticleErrors['theory'] = '--empty';
     !empty($_POST['title']) ? $title = $_POST['title'] : $writingArticleErrors['theory'] = '--empty';
-    // !empty($_POST['paragraph']) ? $paragraph = $_POST['paragraph'] : $writingArticleErrors['paragraph'] = '--empty';
     !empty($_POST['date']) ? $date = $_POST['date'] : $writingArticleErrors['theory'] = '--empty';
     $user_id = $_SESSION['id'];
     
@@ -26,20 +25,25 @@ if(!empty($_POST)) {
         $exec = $prepare->execute($data);
 
         for($i = 0; $i < sizeof($_POST); $i++) {
-            !empty($_POST['content'.$i]) ? $content = $_POST['content'.$i] : $writingArticleErrors['theory'] = '--empty';
+            !empty($_POST['title'.$i]) ? $content = $_POST['title'.$i] : false;
+            !empty($_POST['paragraph'.$i]) ? $content = $_POST['paragraph'.$i] : false;
+            !empty($_POST['title'.$i]) ? $type = 'title' : false;
+            !empty($_POST['paragraph'.$i]) ? $type = 'paragraph' : false;
+
             // Values
-            if(empty($writingArticleErrors)) {
-                $data = ['content' => $content, 'date' => $date];
+            if(!empty($_POST['title'.$i]) || !empty($_POST['paragraph'.$i])) {
+                $data = ['content' => $content, 'type' => $type, 'date' => $date];
                 
                 // Prepare request
-                $prepare = $pdo->prepare('INSERT INTO paragraphs (content, date) VALUES (:content, :date)');
+                $prepare = $pdo->prepare('INSERT INTO paragraphs (content, type, date) VALUES (:content, :type, :date)');
                 
                 $prepare->bindValue(':content', $data['content']);
+                $prepare->bindValue(':type', $data['type']);
                 $prepare->bindValue(':date', $data['date']);
                 
                 // Execute request
                 $exec = $prepare->execute($data);
-            
+
                 header('Location: ./');
             }
         }

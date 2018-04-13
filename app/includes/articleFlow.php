@@ -33,6 +33,7 @@
         <div class="theoriesFlow">
             <?php foreach($articles as $article): ?>
             <?php $poster = 0; ?>
+            <a href="./readArticle.php?id=">
             <div class="theoriesFlow__container">
                 <div class="theoriesFlow__user">
                     <div class="header__profilePicture">
@@ -67,6 +68,7 @@
                     </div>
                 </div>
             </div>
+            </a>
             <?php endforeach; ?>
         </div>
         <script src="../scripts/MarkRatio.js" ></script>

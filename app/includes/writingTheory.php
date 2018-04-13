@@ -38,7 +38,7 @@
                     <label class="theoryCreation__addTitle theoryCreation__addTitleLabel" for="Title">Theory title</label>
                     <input name="title" class="theoryCreation__input" type="text" placeholder="Title">
                     <label class="theoryCreation__addParagraph theoryCreation__addParagraphLabel" for="paragraph">Type your text</label>
-                    <textarea name="content0" class="theoryCreation__inputText " placeholder="Type your theory" id="" cols="30" rows="10"></textarea>
+                    <textarea name="paragraph0" class="theoryCreation__inputText " placeholder="Type your theory" id="" cols="30" rows="10"></textarea>
                     <input type="hidden" name="date" value="<?= time() ?>">
                 <p class="signUp__error signUp__passwordError">
                 <?= !empty($writingArticleErrors) ? 'All fields are required' : false; ?>

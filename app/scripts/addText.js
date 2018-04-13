@@ -58,7 +58,7 @@ class AddText {
 
         // Set textarea
         textarea.classList.add('theoryCreation__inputText')
-        textarea.setAttribute('name', `content${this.i}`)
+        textarea.setAttribute('name', `paragraph${this.i}`)
         textarea.setAttribute('placeholder', 'Add another argument to your theory')
 
         // Push form container in parents array
@@ -81,7 +81,7 @@ class AddText {
         formContainer.appendChild(title)
 
         title.classList.add('theoryCreation__input')
-        title.setAttribute('name', `content${this.i}`)
+        title.setAttribute('name', `title${this.i}`)
         title.setAttribute('placeholder', 'Type your new title')
 
         // Push form container in parents array

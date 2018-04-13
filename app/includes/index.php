@@ -23,12 +23,6 @@
     unset($_SESSION['user']);
     header('Location: ./');
   }
-
-  if(!empty($_POST['user_name']) || !empty($_POST['password'])) {
-    echo '<pre>';
-    print_r($signInErrors);
-    echo '</pre>';
-  }
 ?>
 
 <?php 
