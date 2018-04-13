@@ -40,6 +40,9 @@
                     <label class="theoryCreation__addParagraph theoryCreation__addParagraphLabel" for="paragraph">Type your text</label>
                     <textarea name="content0" class="theoryCreation__inputText " placeholder="Type your theory" id="" cols="30" rows="10"></textarea>
                     <input type="hidden" name="date" value="<?= time() ?>">
+                <p class="signUp__error signUp__passwordError">
+                <?= !empty($writingArticleErrors) ? 'All fields are required' : false; ?>
+                </p>
                 </div>
             <label>
             <input class="signUp__radio--hidden" type="submit">
