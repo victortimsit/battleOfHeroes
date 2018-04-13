@@ -1,23 +1,29 @@
 .article__userComments
-    opacity 0
-    visibility hidden
-    position: absolute
-
-.article__userComments--active
-    opacity 1
-    visibility visible
-    width 350px
-    height 200px
-    max-height 500px
     overflow-y scroll
-    background #fff
-    position absolute
+    width 350px
+    max-height 500px
+    background $white
+    position: absolute
     left 40px
     right 50px
-
+    bottom 0px
+    padding-top 4px
     border-radius 2px
-    
     box-shadow 0 1px 10px 0 rgba(0,0,0,0.30)
+    transform-origin left bottom
+    transition transform 150ms ease, opacity 150ms ease, visibility 150ms ease
+    will-change transform
+
+.article__userComments--hidden
+    visibility hidden
+    opacity 0
+    transform scale(0) translateX(100px)
+
+.article__userComments--visible
+    visibility visible
+    opacity 1
+    transform scale(1) translateX(0px)
+
 
 .article__userCommentsAuthor
     display inline-flex
@@ -47,3 +53,10 @@
     font-family 'Signika'
     padding 5px
 
+
+.article__userCommentInput
+    height 30px !important
+    padding-left 5px
+    font-size 16px
+    font-family 'Signika'
+    width 100%

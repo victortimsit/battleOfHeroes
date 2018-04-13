@@ -1,9 +1,10 @@
 <?php
-
+    include_once('session.php');
     include 'dataBase_connection.php';
+    include 'errors.php';
+    include 'Rooter.php';
+    include 'comments.php';
     //Get the data from the database and fetch them in an Array  
-    
-    
     $query = $pdo->query('SELECT * FROM articles WHERE id = '.$_GET['id']/* $paragraphs[0]->articleID */);
     $article = $query->fetch();
 
@@ -14,6 +15,10 @@
 
     $query = $pdo->query('SELECT * FROM users WHERE id = '.$article->authorID);
     $user = $query->fetch();
+
+    $query = $pdo->query('SELECT * FROM comments WHERE id = '.$article->id);
+    $comments = $query->fetch();
+
 
     $url = 'https://api.themoviedb.org/3/movie/'.$article->movieID.'?api_key=829b41a4cec76e1a71b780aa42cc2498&language=en-US';
     $movie = json_decode(file_get_contents($url));
@@ -39,6 +44,10 @@
     <link rel="stylesheet" href="../styles/css/main.css" />
 </head>
 <body>
+<div class="header--default">
+            <?php include 'header.php'?>
+        </div>
+    
     <img class="background" src="../assets/images/background.png" alt="background">
     <div class="article">
         <div class="article__header">
@@ -66,20 +75,39 @@
         <div class="article__text">
             <?php foreach($paragraphs as $_paragraph): ?>
                 <?php if($_paragraph->type == 'title') { ?>
+                <?php 
+                $query = $pdo->query('SELECT * FROM comments WHERE paragraphID = '.$_paragraph->id);
+                $comments = $query->fetchAll();
+                ?>
                     <div class="article__textTitle">
                         <div class="article__textTitleContent">
-                            <?= $_paragraph->content ?>
+                        <?= $_paragraph->content ?>
                         </div>
                         <div class="article__commentsIconContainer article__commentsIconContainer--top">
                             <img src="../assets/images/icons/commenticon.png" alt="Comments" class="articles__commentsIcon">
-                            <div class="article__userComments">
+                            <div class="article__userComments article__userComments--hidden">
+                            <?php foreach($comments as $_comment): ?>
+                            <?php 
+                            $query = $pdo->query('SELECT * FROM users WHERE id = '.$_comment->authorID);
+                            $author = $query->fetch();
+                            ?>
                                 <div class="article__userCommentsAuthor">
-                                    <img src="#" alt="" class="article__userCommentsAuthor--avatar">
-                                    <div class="article__userCommentsAuthor--name">Michel</div>
+                                    <img src="../assets/avatars/<?= $author->avatar ?>.jpg" alt="" class="article__userCommentsAuthor--avatar">
+                                    <div class="article__userCommentsAuthor--name"><?= $author->user_name ?></div>
                                 </div>
                                 <div class="article__userCommentsContent">
-                                    <p>Amazing theory man omg <3<3</p>
+                                    <p><?= $_comment->content ?></p>
                                 </div>
+                            <?php endforeach ?>
+                            <form action="#" method="post">
+                                <label class="article__userCommentLabel" for="comment"></label>
+                                <input name="content" class="article__userCommentInput" type="text" placeholder="Add a comment...">
+                                <input name="date" type="hidden" value="<?= time() ?>">
+                                <input name="articleID" type="hidden" value="<?= $article->id ?>">
+                                <input name="paragraphID" type="hidden" value="<?= $_paragraph->id ?>">
+                                <input name="authorID" type="hidden" value="<?= $_SESSION['id'] ?>">
+                                <input class="signUp__radio--hidden" type="submit">
+                            </form>
                             </div>
                         </div>
                     </div>
@@ -107,5 +135,6 @@
             <?php endforeach; ?>
         </div>
     </div>
+    <script src="../scripts/articlesComments.js"></script>
 </body>
 </html>
