@@ -26,13 +26,12 @@
 }
 .article__userCommentsAuthor {
   display: inline-flex;
-  margin-left: 10px;
   align-items: center;
 }
 .article__userCommentsAuthor--avatar {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: $red;
 }
@@ -48,7 +47,7 @@
 .article__userCommentsContent {
   font-size: 16px;
   font-family: 'Signika';
-  padding: 5px;
+  padding-bottom: 5px;
 }
 .article__userCommentInput {
   height: 30px !important;
