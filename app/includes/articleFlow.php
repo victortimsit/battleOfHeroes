@@ -33,7 +33,7 @@
         <div class="theoriesFlow">
             <?php foreach($articles as $article): ?>
             <?php $poster = 0; ?>
-            <a href="./readArticle.php?id=">
+            <a href="./readArticle.php?id=<?= $article->id ?>">
             <div class="theoriesFlow__container">
                 <div class="theoriesFlow__user">
                     <div class="header__profilePicture">

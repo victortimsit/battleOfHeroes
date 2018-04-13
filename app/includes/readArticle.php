@@ -2,9 +2,9 @@
 
     include 'dataBase_connection.php';
     //Get the data from the database and fetch them in an Array  
-
     
-    $query = $pdo->query('SELECT * FROM articles WHERE id = 47 '/* $paragraphs[0]->articleID */);
+    
+    $query = $pdo->query('SELECT * FROM articles WHERE id = '.$_GET['id']/* $paragraphs[0]->articleID */);
     $article = $query->fetch();
 
     $articleID = $article->date;
@@ -71,7 +71,7 @@
                             <?= $_paragraph->content ?>
                         </div>
                         <div class="article__commentsIconContainer article__commentsIconContainer--top">
-                            <img src="../assets/images/icons/commenticon.png" alt="Comments" class="article__commentsIcon">
+                            <img src="../assets/images/icons/commenticon.png" alt="Comments" class="articles__commentsIcon">
                             <div class="article__userComments">
                                 <div class="article__userCommentsAuthor">
                                     <img src="#" alt="" class="article__userCommentsAuthor--avatar">
@@ -89,11 +89,11 @@
                             <?= $_paragraph->content ?>
                         </div>
                         <div class="article__commentsIconContainer">
-                            <img src="../assets/images/icons/commenticon.png" alt="Comments" class="article__commentsIcon">
+                            <img src="../assets/images/icons/commenticon.png" alt="Comments" class="articles__commentsIcon">
                             <div class="article__userComments">
                                 <div class="article__userCommentsAuthor">
                                     <div class="article__userCommentsAuthor--avatar">
-                                        <img src="#" alt="" class="article__userCommentsAuthor--avatarImg">
+                                        <img src="#" alt="" class="articles__userCommentsAuthor--avatarImg">
                                     </div>
                                     <div class="article__userCommentsAuthor--name">Michel</div>
                                 </div>

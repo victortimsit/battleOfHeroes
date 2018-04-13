@@ -9,14 +9,16 @@
   items-align: center;
   font-size: 22px;
   font-family: 'bebas';
-  padding: 10px;
+  padding-bottom: 30px;
+  padding-top: 10px;
 }
 .article__textCore {
   display: inline-flex;
   items-align: center;
   font-size: 16px;
   font-family: 'signika';
-  padding: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .articles__commentsIcon {
   width: 20px;
