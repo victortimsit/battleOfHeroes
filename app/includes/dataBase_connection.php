@@ -2,8 +2,8 @@
 
 // Connexion variables
 define('DB_HOST', 'localhost');
-define('DB_PORT', '8889');
-define('DB_NAME', 'battleOfHeroes');
+define('DB_PORT', '3306');
+define('DB_NAME', 'marvel_theory');
 define('DB_USER', 'root');
 define('DB_PASS', 'root');
 
