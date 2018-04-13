@@ -302,6 +302,8 @@ a {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
+  padding-bottom: 30px;
+  border-radius: 2px;
   background: #fff;
 }
 .article {
@@ -444,6 +446,7 @@ a {
   font-size: 43px;
   color: #4a4a4a;
   text-align: center;
+  font-family: 'bebas';
 }
 .signUp__label {
   margin-top: 10px;
@@ -469,6 +472,7 @@ a {
   display: inline-block;
 }
 .signUp__error {
+  font-family: 'Signika';
   padding-top: 2px;
   height: 20px;
   color: #ed1b2a;
@@ -1136,7 +1140,6 @@ a {
 }
 .theoryCreation__moviesPosterImg {
   display: inline-block;
-  margin-top: 10px;
   margin-left: 10px;
   margin-bottom: 10px;
   margin-right: 25px;
@@ -1250,8 +1253,15 @@ a {
 .theoryCreation__addButtonText {
   display: inline-block;
 }
+
 .article__header {
   margin-bottom: 200px;
+}
+.theoryCreation__send {
+  float: none;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 324px;
 }
 .article__headerImg {
   width: 300px;

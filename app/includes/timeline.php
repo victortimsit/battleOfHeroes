@@ -11,6 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../styles/css/main.css" />
     <link rel="stylesheet" href="../styles/css/states/header--position.css" />
+    <link href="https://fonts.googleapis.com/css?family=Signika:300,400,600,700" rel="stylesheet">
     <title>Timeline</title>
 </head>
 <body>

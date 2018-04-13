@@ -52,9 +52,6 @@ class SignUp {
         }
     }    
     function createAccount($userName, $email, $password, $avatar) {
-        // echo '<pre>';
-        // print_r('Account created !');
-        // echo '</pre>';
         // Values
         $data = ['user_name' => $userName, 'email' => $email, 'password' => password_hash($password, PASSWORD_DEFAULT), 'avatar' => $avatar];
                 

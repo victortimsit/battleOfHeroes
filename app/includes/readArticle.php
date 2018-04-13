@@ -3,14 +3,11 @@
     include 'dataBase_connection.php';
     //Get the data from the database and fetch them in an Array  
 
-    echo '<pre>';
-    var_dump($articles->dislikes);
-    echo '</pre>';
-
     $query = $pdo->query('SELECT * FROM paragraphs');
     $paragraphs = $query->fetchAll();
 
     $query = $pdo->query('SELECT * FROM articles WHERE id = 35 '/* $paragraphs[0]->articleID */);
+
     $articles = $query->fetch();
 
     $query = $pdo->query('SELECT * FROM users WHERE id = '.$articles->authorID);

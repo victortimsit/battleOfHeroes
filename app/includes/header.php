@@ -21,7 +21,7 @@
         </div>
         <div class="header__end">
                 <div class="header__addTheories">
-                    <a href="addTheory.php">+ ADD THEORIES</a>
+                    <a href="writingTheory.php">+ ADD THEORIES</a>
                 </div>
             <div class="header__account">
                 <span class="header__profilePicture">
