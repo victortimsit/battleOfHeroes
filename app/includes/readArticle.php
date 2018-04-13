@@ -3,10 +3,10 @@
     include 'dataBase_connection.php';
     //Get the data from the database and fetch them in an Array  
 
-    $query = $pdo->query('SELECT * FROM article_content');
+    $query = $pdo->query('SELECT * FROM paragraphs');
     $articleContents = $query->fetchAll();
 
-    $query = $pdo->query('SELECT * FROM articles WHERE id ='.$articleContents[0]->articleId);
+    $query = $pdo->query('SELECT * FROM articles WHERE id ='.$articleContents[0]->articleID);
     $articles = $query->fetch();
 
     $url = 'https://api.themoviedb.org/3/movie/'.$articles->movieID.'?api_key=829b41a4cec76e1a71b780aa42cc2498&language=en-US';

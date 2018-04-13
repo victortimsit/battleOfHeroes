@@ -1,5 +1,5 @@
 <?php 
-
+    include 'writingArticle__form.php';
     $url = 'https://api.themoviedb.org/3/list/62792?api_key=829b41a4cec76e1a71b780aa42cc2498&language=en-US';
     $movieList = json_decode(file_get_contents($url));
 
@@ -12,10 +12,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Theory Writing</title>
-
+    <link href="https://fonts.googleapis.com/css?family=Signika:300,400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="../styles/css/main.css" />
 </head>
 <body>
+<?php include 'header.php' ?>
 <img class="background" src="../assets/images/background.png" alt="background">
     <div class="theoryCreation">
         <div class="theoryCreation__create">
@@ -27,19 +28,26 @@
             <div class="theoryCreation__chooseMovie">
                 <?php foreach($movieList->items as $_item): ?>
                     <label>
-                        <input name="movie" class="theoryCreation__radio signUp__radio--hidden" type="radio">
+                        <input name="movie" class="theoryCreation__radio signUp__radio--hidden" value="<?= $_item->id ?>" type="radio">
                         <img class="theoryCreation__moviesPosterImg" data-moviePoster="<?= $_item->poster_path ?>" data-movieTitle="<?= $_item->original_title ?>" src="https://image.tmdb.org/t/p/w150_and_h225_bestv2<?= $_item->poster_path ?>" alt="<?= $_item->original_title ?>">
                     </label>
                 <?php endforeach; ?>
             </div>
             <div class="theoriCreation__formContainer"></div>
                 <div class="theoryCreation__addText">
-                    <label class="theoryCreation__addTitle theoryCreation__addTitleLabel" for="Title">Title</label>
+                    <label class="theoryCreation__addTitle theoryCreation__addTitleLabel" for="Title">Theory title</label>
                     <input name="title" class="theoryCreation__input" type="text" placeholder="Title">
                     <label class="theoryCreation__addParagraph theoryCreation__addParagraphLabel" for="paragraph">Type your text</label>
-                    <textarea name="paragraph" class="theoryCreation__inputText " placeholder="Type your theory" id="" cols="30" rows="10"></textarea>
+                    <textarea name="paragraph0" class="theoryCreation__inputText " placeholder="Type your theory" id="" cols="30" rows="10"></textarea>
                     <input type="hidden" name="date" value="<?= time() ?>">
+                <p class="signUp__error signUp__passwordError">
+                <?= !empty($writingArticleErrors) ? 'All fields are required' : false; ?>
+                </p>
                 </div>
+            <label>
+            <input class="signUp__radio--hidden" type="submit">
+            <div class="theoryCreation__send timeline__hoverButton--red">Publish your theory</div>
+            </label>
             </form>
             <div class="theoryCreation__addButtons">
                 <div class="theoryCreation__addButton theoryCreation__addButtonTitle">
