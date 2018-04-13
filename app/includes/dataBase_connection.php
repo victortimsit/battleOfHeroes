@@ -12,6 +12,7 @@ define('DB_NAME', 'marvel');
 define('DB_USER', 'marvel');
 define('DB_PASS', 'clio3');
 
+
 try {
     // Try to connect to database
     $pdo = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME.';port='.DB_PORT, DB_USER, DB_PASS);
